@@ -1,0 +1,24 @@
+<importgrammar encoding="ISO-8859-15">
+  <employeegrantdividendprecalculatedreinvested>
+    <header import_type="insert">
+      <description data_type="string" />
+      <numberofrecords data_type="number" />
+    </header>
+    <data_row>
+      <dividendreference data_type="string" max_length="128" />
+      <grantbasedplanname data_type="string" max_length="128" />
+      <recorddate data_type="date" date_format="dd-MMM-yyyy" />
+      <grantname data_type="string" max_length="128" />
+      <employeenumber data_type="string" max_length="128" />
+      <sharestoaward data_type="number" />
+      <sharesoftranche data_type="number" />
+      <vestschedulerecord>
+        <vestschedule>
+          <vestquantity data_type="decimal" />
+          <vestdate data_type="date" date_format="dd-MMM-yyyy" />
+          <performancerulename data_type="string" />
+        </vestschedule>
+      </vestschedulerecord>
+    </data_row>
+  </employeegrantdividendprecalculatedreinvested>
+</importgrammar>

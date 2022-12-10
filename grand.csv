@@ -1,0 +1,52 @@
+ms-b-test.qa.shareworks.com build b7810e9e6d043c9edd494f1300762404ac80cde2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+TaxFilingRequestLogPK,_raw,_time,calls,date_hour,date_mday,date_minute,date_month,date_second,date_wday,date_year,date_zone,eventtype,grand_total,host,index,linecount,punct,source,sourcetype,splunk_server,splunk_server_group,tag,tag::eventtype,threadCount,time,timeendpos,timestartpos,unix_category,unix_group
+9.45E+11,"Report for Generate 1099 Report, TaxFilingRequestLogPK=944848080531
+Generate 1099 Report                                                                                                     elapsed time = 4,309.794440s average time = 4,309.794440s number of calls = 1       
+  getWithdrawalTradeDateByCompany                                                                                        elapsed time = 1,589.814613s average time = 1,589.814613s number of calls = 1       
+    bulkLoadWithdrawalAndFills                                                                                           elapsed time = 1,572.818487s average time = 1,572.818487s number of calls = 1       
+  get1099TaxReportDtosInParallel, threadCount=10                                                                         elapsed time = 2,397.820413s average time = 2,397.820413s number of calls = 1       
+    Remove Unlinked Tracked Holding Entries                                                                              elapsed time = 0.007657s   average time = 0.003828s   number of calls = 2       
+      Get Employees with Tracked Holding Entries                                                                         elapsed time = 0.003316s   average time = 0.001658s   number of calls = 2       
+      Get Employees with Linked Account                                                                                  elapsed time = 0.001717s   average time = 0.000286s   number of calls = 6       
+    Get 1099 Records In Parallel                                                                                         elapsed time = 21,186.850040s average time = 39.675749s  number of calls = 534     
+      Get 1099 Repository                                                                                                elapsed time = 4,385.929456s average time = 8.213351s   number of calls = 534     
+        Get Company Information                                                                                          elapsed time = 0.788654s   average time = 0.001477s   number of calls = 534     
+      Get Dividend 1099 Data                                                                                             elapsed time = 7,946.868817s average time = 14.881777s  number of calls = 534     
+        Populate work table for Dividend 1099                                                                            elapsed time = 6,680.035131s average time = 12.509429s  number of calls = 534     
+        Get Pks for Dividend 1099 Data                                                                                   elapsed time = 71.233574s  average time = 0.133396s   number of calls = 534     
+        Get State Backup Witholding Tax Data for Dividend 1099                                                           elapsed time = 2.944007s   average time = 0.005513s   number of calls = 534     
+        Get Foreign Tax Data for Dividend 1099                                                                           elapsed time = 1.539718s   average time = 0.002883s   number of calls = 534     
+        Get IRS Backup Withholding Tax Data for Dividend 1099                                                            elapsed time = 32.967652s  average time = 0.061737s   number of calls = 534     
+        Get NRW Tax Data for Dividend 1099                                                                               elapsed time = 0.819701s   average time = 0.001535s   number of calls = 534     
+        Get Nra tax Data for Dividend 1099                                                                               elapsed time = 18.596773s  average time = 0.034825s   number of calls = 534     
+        Get Foreign Tax Data with Exstream Solium tax slip generation for Dividend 1099                                  elapsed time = 0.003724s   average time = 0.000007s   number of calls = 534     
+        Get Dividend refund and certification data for 1099                                                              elapsed time = 11.064542s  average time = 0.020720s   number of calls = 534     
+        Get Dividend 1099Div certification states long way for ptps with missing cert info in additional txn table       elapsed time = 156.591738s average time = 0.293243s   number of calls = 534     
+        Get Dividend and certification data for 1099                                                                     elapsed time = 970.666794s average time = 1.817728s   number of calls = 534     
+      Tax Filing 1099 Div Original Aggregator                                                                            elapsed time = 4.112422s   average time = 0.007701s   number of calls = 534     
+      Get Eligible 1099Bs                                                                                                elapsed time = 8,833.930153s average time = 16.542940s  number of calls = 534     
+        Enhanced: Get Options 1099 Data                                                                                  elapsed time = 729.913945s average time = 1.366880s   number of calls = 534     
+          GetBuwMovements                                                                                                elapsed time = 0.095543s   average time = 0.000179s   number of calls = 534     
+        extract Withdrawal Trade Date Map from table                                                                     elapsed time = 6,654.110071s average time = 12.460880s  number of calls = 534     
+          Enhanced: Get LongShares 1099 Data                                                                             elapsed time = 6,653.418523s average time = 12.459585s  number of calls = 534     
+            Enhanced: WashSale OriginalData                                                                              elapsed time = 374.666769s average time = 0.701623s   number of calls = 534     
+            Wash Sale Disallowed Loss For Withdrawal                                                                     elapsed time = 331.309787s average time = 0.620430s   number of calls = 534     
+            Enhanced: Get LongShares 1099 Populate 1099 holding entry table                                              elapsed time = 193.021483s average time = 0.361463s   number of calls = 534     
+            Enhanced: Get LongShares 1099 get roc adjusted lot data                                                      elapsed time = 1,598.548786s average time = 2.993537s   number of calls = 534     
+              Enhanced: Get LongShares 1099 Populate lot temp table                                                      elapsed time = 3.621344s   average time = 0.006782s   number of calls = 534     
+              Enhanced: Get LongShares 1099 get holding entries for lots                                                 elapsed time = 1,576.378436s average time = 2.952020s   number of calls = 534     
+              calculateForLot                                                                                            elapsed time = 1.676465s   average time = 0.000001s   number of calls = 2232782 
+            GetBuwMovements                                                                                              elapsed time = 0.069921s   average time = 0.000131s   number of calls = 534     
+        Get Release 1099 Data                                                                                            elapsed time = 1,449.219118s average time = 2.713893s   number of calls = 534     
+          GetBuwMovements                                                                                                elapsed time = 0.055104s   average time = 0.000103s   number of calls = 534     
+          GetEligibleReleases                                                                                            elapsed time = 652.231163s average time = 1.221407s   number of calls = 534     
+          getIrsBackupWithholdingFees                                                                                    elapsed time = 111.045691s average time = 0.207951s   number of calls = 534     
+          getStateBuwFees                                                                                                elapsed time = 76.948559s  average time = 0.144098s   number of calls = 534     
+          GetBuwRefundInfo                                                                                               elapsed time = 5.298659s   average time = 0.009923s   number of calls = 534     
+          getReleaseVestDates                                                                                            elapsed time = 128.118845s average time = 0.239923s   number of calls = 534     
+          Query within getOracle19CReleaseData                                                                           elapsed time = 475.296597s average time = 0.890069s   number of calls = 534     
+  Dividend 1099 Record Converter                                                                                         elapsed time = 6.365157s   average time = 0.000012s   number of calls = 531902  
+Grand Total                                                                                                              elapsed time = 4,309.794440s average time = 4,309.794440s number of calls = 1       ",2022-09-22T18:12:27.000-0600,1,18,22,12,september,27,thursday,2022,local,,"4,309.794440",yka-ms-qa-app04.qa.shareworks.net,ms-b-test,47,"____,_=___________________________________________",/home/weblogic/domains/ms-b-test/nohup-1_1.out,nohup-1_1,yyc-splunk01,,,,10,4,67,55,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1099_TEST_FULL_20220922_180731.dat,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Record,1417907,,,,,,,,,,,,,,,,,,,,,,,,,,,,

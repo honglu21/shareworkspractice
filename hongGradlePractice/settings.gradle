@@ -1,0 +1,20 @@
+rootProject.name = 'hongGradlePractice'
+
+//pluginManagement {
+//    //gradlePluginPortal()
+//    plugins {
+//        id "com.gradle.enterprise" version "3.6.1"
+//        id "com.gradle.common-custom-user-data-gradle-plugin" version '1.4.2'
+//    }
+//}
+//
+//
+//
+//gradleEnterprise {
+//    buildScan {
+//        server = 'http://172.25.33.106'
+//        allowUntrustedServer = true
+//        captureTaskInputFiles = true
+//        //publishAlwaysIf(publishEachBuildScan.toBoolean())
+//    }
+//}
